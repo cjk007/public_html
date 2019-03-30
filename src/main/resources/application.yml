@@ -1,0 +1,86 @@
+
+###################  项目启动端口  ###################
+server:
+  port: 8081
+
+
+###################  spring配置  ###################
+spring:
+  profiles:
+    active: 
+#  mvc:
+#    static-path-pattern: /static/**
+#    view:
+#      prefix: /WEB-INF/view
+  http:
+    converters:
+      preferred-json-mapper: fastjson
+#    multipart:
+#      max-request-size: 100MB #最大请求大小
+#      max-file-size: 100MB #最大文件大小
+  devtools:
+    restart:
+      enabled: true #是否开启开发者工具（true/false）
+      additional-paths: src/main/java
+      exclude: static/**,WEB-INF/view/**
+  aop:
+    proxy-target-class: true #false为启用jdk默认动态代理,true为cglib动态代理
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/systemadmin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+#    username: root
+#    password: root
+#    db-name: systemadmin
+#    filters: log4j,wall,mergeStat
+
+
+logging:
+  level.root: info
+  level.web: debug
+  file: logs/web.log
+  level.org.springframework.security: debug
+###########安全认证 进行了关闭。##########
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  security:
+    enabled: false
+    
+
+
+##########################################################
+###################  Mybatis  ###################
+##########################################################
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.jk.**.entry,com.jk.**.domain
+
+
+##########################################################
+###################  正式环境的profile  ###################
+##########################################################
+#spring:
+#  profiles: produce
+#  datasource:
+
+ #     url: jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+  #    username: root
+   #   password: root
+    #  filters: log4j,wall,mergeStat
+
+
+#logging:
+#  level.root: warn
+#  path: logs/
+#  file: web.log
+
+info:
+  app:
+    name: "@project.name@" 

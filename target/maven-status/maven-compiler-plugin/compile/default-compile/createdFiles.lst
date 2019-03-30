@@ -1,0 +1,8 @@
+com\jk\sys\domain\MenuDO.class
+com\jk\sys\controller\BaseController.class
+com\jk\MyApplication.class
+com\jk\config\WebMvcConfig.class
+com\jk\sys\service\MenuService.class
+com\jk\sys\controller\LoginController.class
+com\jk\config\WebMvcConfig$FaviconController.class
+com\jk\sys\common\domain\Tree.class
