@@ -26,12 +26,12 @@ spring:
   aop:
     proxy-target-class: true #false为启用jdk默认动态代理,true为cglib动态代理
 
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/systemadmin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
-#    username: root
-#    password: root
-#    db-name: systemadmin
-#    filters: log4j,wall,mergeStat
+  datasource:
+    url: jdbc:mysql://localhost:3306/systemadmin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+    db-name: systemadmin
+    filters: log4j,wall,mergeStat
 
 
 logging:
