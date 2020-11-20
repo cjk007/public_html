@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public TokenBasedRememberMeServices rememberMeServices() {
-        return new TokenBasedRememberMeServices("remember-me-key", accountService);
+        return new TokenBasedRememberMeServices("remember-me-key", accountService);/*加注释，测试jenkins+github*/
     }
 
     @Bean
