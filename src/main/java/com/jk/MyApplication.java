@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
+
 //@MapperScan(basePackages ={"com.insoft.lockcloud.room.dao"})
 //(exclude= {DataSourceAutoConfiguration.class})
 public class MyApplication {
